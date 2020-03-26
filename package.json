@@ -1,0 +1,23 @@
+{
+  "name": "brain-games",
+  "version": "0.0.1",
+  "description": "Hexlet pet project: console brain games",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilych/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "hexlet",
+    "cli"
+  ],
+  "author": "kilych (https://github.com/kilych)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilych/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/kilych/frontend-project-lvl1#readme"
+}
