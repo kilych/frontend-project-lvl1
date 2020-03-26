@@ -1,8 +1,12 @@
 {
-  "name": "brain-games",
+  "name": "kilych-brain-games",
   "version": "0.0.1",
   "description": "Hexlet pet project: console brain games",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "jest --colors"
   },
@@ -19,5 +23,7 @@
   "bugs": {
     "url": "https://github.com/kilych/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/kilych/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/kilych/frontend-project-lvl1#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }
