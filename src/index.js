@@ -1,10 +1,7 @@
-import readlineSync from 'readline-sync';
+import greet from './helper.js';
 
-const run = () => {
-  console.log('Welcome to the Brain Games!\n');
-
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+const loop = () => {
+  greet();
 };
 
-export default run;
+export default loop;
