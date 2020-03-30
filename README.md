@@ -7,4 +7,16 @@
 
 ### Asciinema
 
-[asciinema](https://kilych.github.io/asciinema.html)
+[Installation from Github](https://kilych.github.io/asciinema/installation)
+
+#### Games
+
+[Even number](https://kilych.github.io/asciinema/brain-even)
+
+[Calculator](https://kilych.github.io/asciinema/brain-calc)
+
+[Greatest common divisor](https://kilych.github.io/asciinema/brain-gcd)
+
+[Progression](https://kilych.github.io/asciinema/brain-progression)
+
+[Prime number](https://kilych.github.io/asciinema/brain-prime)
