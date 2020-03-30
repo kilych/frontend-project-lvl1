@@ -2,7 +2,7 @@ import { getRandomInt, makeQaGenerator } from '../helper.js';
 
 const maxNum = 100;
 
-const questionWording = 'What is the result of the expression?';
+const questionWording = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
   const rem = a % b;
