@@ -22,8 +22,8 @@ const loop = (
   while (i <= correctAnswerMaxCount) {
     const [question, correctAnswer] = makeQA();
 
-    const answer = readlineSync.question(`Question: ${question}`);
-    console.log(`Your answer: ${answer}`);
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
 
     if (answer !== correctAnswer) {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
