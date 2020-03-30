@@ -1,5 +1,16 @@
 #!/usr/bin/env node
 
-import loop from '../src/games/brain-even.js';
+import { greet, loop } from '../src/index.js';
+import {
+  questionWording, makeQuestion, stringifyQuestion, makeAnswer,
+} from '../src/games/brain-even.js';
 
-loop();
+const playerName = greet();
+
+loop(
+  playerName,
+  questionWording,
+  makeQuestion,
+  stringifyQuestion,
+  makeAnswer,
+);

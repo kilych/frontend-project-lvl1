@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import loop from '../src/index.js';
+import { greet } from '../src/index.js';
 
-loop();
+greet();
