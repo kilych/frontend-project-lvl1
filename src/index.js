@@ -14,19 +14,15 @@ const greet = () => {
 const loop = (
   playerName,
   questionWording,
-  makeQuestion,
-  stringifyQuestion,
-  makeAnswer,
+  makeQA,
 ) => {
   console.log(questionWording);
 
   let i = 1;
   while (i <= correctAnswerMaxCount) {
-    const question = makeQuestion();
-    const correctAnswer = makeAnswer(question);
-    const questionString = stringifyQuestion(question);
+    const [question, correctAnswer] = makeQA();
 
-    const answer = readlineSync.question(`Question: ${questionString}`);
+    const answer = readlineSync.question(`Question: ${question}`);
     console.log(`Your answer: ${answer}`);
 
     if (answer !== correctAnswer) {

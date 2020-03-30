@@ -1,3 +1,5 @@
+import { getRandomInt, makeQaGenerator } from '../helper.js';
+
 const maxNum = 20;
 
 const operatorMapping = {
@@ -6,9 +8,7 @@ const operatorMapping = {
   '*': (a, b) => a * b,
 };
 
-const questionWording = 'What is the result of the expression?.';
-
-const getRandomInt = (min, max) => Math.round((Math.random() * (max - min)) + min);
+const questionWording = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -27,9 +27,9 @@ const stringifyQuestion = (question) => `${question[1]} ${question[0]} ${questio
 
 const makeAnswer = (expr) => `${operatorMapping[expr[0]](expr[1], expr[2])}`;
 
+const makeQA = makeQaGenerator(makeQuestion, stringifyQuestion, makeAnswer);
+
 export {
   questionWording,
-  makeQuestion,
-  stringifyQuestion,
-  makeAnswer,
+  makeQA,
 };
