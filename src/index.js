@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const correctAnswerMaxCount = 3;
+const maxNumOfRounds = 3;
 
 const greet = () => {
   console.log('Welcome to the Brain Games!');
@@ -19,7 +19,7 @@ const loop = (
   console.log(questionWording);
 
   let i = 1;
-  while (i <= correctAnswerMaxCount) {
+  while (i <= maxNumOfRounds) {
     const [question, correctAnswer] = makeQA();
 
     console.log(`Question: ${question}`);
