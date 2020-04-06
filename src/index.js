@@ -18,8 +18,7 @@ const loop = (
 ) => {
   console.log(questionWording);
 
-  let i = 1;
-  while (i <= maxNumOfRounds) {
+  for (let i = 1; i <= maxNumOfRounds; i += 1) {
     const [question, correctAnswer] = makeQA();
 
     console.log(`Question: ${question}`);
@@ -33,8 +32,6 @@ const loop = (
     }
 
     console.log('Correct!');
-
-    i += 1;
   }
 
   console.log(`Congratulations, ${playerName}!`);
