@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { greet } from '../src/index.js';
+import run from '../src/dumb-game-engine.js';
 
-greet();
+run();
