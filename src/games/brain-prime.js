@@ -1,4 +1,4 @@
-import { getRandomInt, makeQaGenerator } from '../helper.js';
+import { getRandomInt } from '../helper.js';
 
 const maxNum = 100;
 
@@ -24,9 +24,9 @@ const isPrime = (num) => {
 
 const makeAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
-const makeQA = makeQaGenerator(makeQuestion, stringifyQuestion, makeAnswer);
-
 export {
   questionWording,
-  makeQA,
+  makeQuestion,
+  makeAnswer,
+  stringifyQuestion,
 };

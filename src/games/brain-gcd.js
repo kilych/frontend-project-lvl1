@@ -1,4 +1,4 @@
-import { getRandomInt, makeQaGenerator } from '../helper.js';
+import { getRandomInt } from '../helper.js';
 
 const maxNum = 100;
 
@@ -20,9 +20,9 @@ const stringifyQuestion = (question) => `${question[0]} ${question[1]}`;
 
 const makeAnswer = (nums) => `${gcd(...nums)}`;
 
-const makeQA = makeQaGenerator(makeQuestion, stringifyQuestion, makeAnswer);
-
 export {
   questionWording,
-  makeQA,
+  makeQuestion,
+  makeAnswer,
+  stringifyQuestion,
 };

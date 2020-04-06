@@ -1,4 +1,4 @@
-import { getRandomInt, makeQaGenerator } from '../helper.js';
+import { getRandomInt } from '../helper.js';
 
 const maxNum = 20;
 
@@ -27,9 +27,9 @@ const stringifyQuestion = (question) => `${question[1]} ${question[0]} ${questio
 
 const makeAnswer = (expr) => `${operatorMapping[expr[0]](expr[1], expr[2])}`;
 
-const makeQA = makeQaGenerator(makeQuestion, stringifyQuestion, makeAnswer);
-
 export {
   questionWording,
-  makeQA,
+  makeQuestion,
+  makeAnswer,
+  stringifyQuestion,
 };

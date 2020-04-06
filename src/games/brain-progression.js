@@ -1,4 +1,4 @@
-import { getRandomInt, makeQaGenerator } from '../helper.js';
+import { getRandomInt } from '../helper.js';
 
 const defaultSize = 10;
 
@@ -28,9 +28,9 @@ const stringifyQuestion = ([start, step, hiddenElemIndex]) => {
 
 const makeAnswer = ([start, step, hiddenElemIndex]) => `${start + step * hiddenElemIndex}`;
 
-const makeQA = makeQaGenerator(makeQuestion, stringifyQuestion, makeAnswer);
-
 export {
   questionWording,
-  makeQA,
+  makeQuestion,
+  makeAnswer,
+  stringifyQuestion,
 };

@@ -1,14 +1,14 @@
 const getRandomInt = (min, max) => Math.round((Math.random() * (max - min)) + min);
 
-const makeQaGenerator = (makeQ, stringifyQ, makeA) => () => {
-  const question = makeQ();
-  const stringQuestion = stringifyQ(question);
-  const answer = makeA(question);
+const makeQA = (game) => {
+  const question = game.makeQuestion();
+  const questionString = game.stringifyQuestion(question);
+  const answer = game.makeAnswer(question);
 
-  return [stringQuestion, answer];
+  return [questionString, answer];
 };
 
 export {
   getRandomInt,
-  makeQaGenerator,
+  makeQA,
 };
