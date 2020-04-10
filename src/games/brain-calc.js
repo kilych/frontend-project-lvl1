@@ -2,7 +2,7 @@ import { getRandomInt } from '../helper.js';
 
 const maxNum = 20;
 
-const operatorMapping = {
+const operators = {
   '+': (a, b) => a + b,
   '-': (a, b) => a - b,
   '*': (a, b) => a * b,
@@ -10,15 +10,15 @@ const operatorMapping = {
 
 const questionWording = 'What is the result of the expression?';
 
-const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  const random = getRandomInt(0, 2);
+const getRandomOperatorSymbol = () => {
+  const operatorSymbols = [...Object.keys(operators)];
+  const random = getRandomInt(0, operatorSymbols.length - 1);
 
-  return operators[random];
+  return operatorSymbols[random];
 };
 
 const makeQuestion = () => [
-  getRandomOperator(),
+  getRandomOperatorSymbol(),
   getRandomInt(1, maxNum),
   getRandomInt(1, maxNum),
 ];
