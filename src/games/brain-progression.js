@@ -1,4 +1,4 @@
-import { getRandomInt } from '../helper.js';
+import { getRandomInt } from '../math.js';
 
 const defaultSize = 10;
 
