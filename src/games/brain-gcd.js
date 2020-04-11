@@ -2,7 +2,7 @@ import { getRandomInt, gcd } from '../math.js';
 
 const maxNum = 100;
 
-const questionWording = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const makeQuestion = () => [
   getRandomInt(1, maxNum),
@@ -22,6 +22,6 @@ const makeQA = () => {
 };
 
 export {
-  questionWording,
+  description,
   makeQA,
 };

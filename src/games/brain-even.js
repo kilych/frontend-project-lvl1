@@ -2,7 +2,7 @@ import { getRandomInt, isEven } from '../math.js';
 
 const maxNum = 100;
 
-const questionWording = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const makeQuestion = () => getRandomInt(1, maxNum);
 
@@ -19,6 +19,6 @@ const makeQA = () => {
 };
 
 export {
-  questionWording,
+  description,
   makeQA,
 };

@@ -8,7 +8,7 @@ const operators = {
   '*': (a, b) => a * b,
 };
 
-const questionWording = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const getRandomOperatorSymbol = () => {
   const operatorSymbols = [...Object.keys(operators)];
@@ -36,6 +36,6 @@ const makeQA = () => {
 };
 
 export {
-  questionWording,
+  description,
   makeQA,
 };

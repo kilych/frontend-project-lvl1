@@ -2,7 +2,7 @@ import { getRandomInt } from '../math.js';
 
 const defaultSize = 10;
 
-const questionWording = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const makeQuestion = () => {
   const start = getRandomInt(1, 100);
@@ -38,6 +38,6 @@ const makeQA = () => {
 };
 
 export {
-  questionWording,
+  description,
   makeQA,
 };
