@@ -16,7 +16,8 @@ const isPrimeIter = (num, divisor) => {
 };
 
 const isPrime = (num) => {
-  if ([1, 2, 3].includes(num)) return true;
+  if (num <= 1) return false;
+  if (num <= 3) return true;
   if (num % 2 === 0) return false;
 
   return isPrimeIter(num, 3);
