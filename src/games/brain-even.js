@@ -6,7 +6,7 @@ const questionWording = 'Answer "yes" if the number is even, otherwise answer "n
 
 const makeQuestion = () => getRandomInt(1, maxNum);
 
-const stringifyQuestion = (question) => `${question}`;
+const stringifyQuestion = (question) => question.toString();
 
 const isEven = (num) => num % 2 === 0;
 

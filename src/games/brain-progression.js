@@ -19,14 +19,15 @@ const makeQuestion = () => {
 const stringifyQuestion = ([start, step, hiddenElemIndex]) => {
   const elems = [];
   for (let i = 0; i < defaultSize; i += 1) {
-    const elem = (i === hiddenElemIndex) ? '..' : `${start + i * step}`;
+    const elem = (i === hiddenElemIndex) ? '..' : (start + (i * step)).toString();
     elems.push(elem);
   }
 
   return elems.join(' ');
 };
 
-const makeAnswer = ([start, step, hiddenElemIndex]) => `${start + step * hiddenElemIndex}`;
+const makeAnswer = ([start, step, hiddenElemIndex]) => (start + (step * hiddenElemIndex))
+  .toString();
 
 export {
   questionWording,

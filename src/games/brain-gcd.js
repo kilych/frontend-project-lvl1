@@ -18,9 +18,9 @@ const makeQuestion = () => [
   getRandomInt(1, maxNum),
 ];
 
-const stringifyQuestion = (question) => `${question[0]} ${question[1]}`;
+const stringifyQuestion = ([num1, num2]) => `${num1} ${num2}`;
 
-const makeAnswer = (nums) => `${gcd(...nums)}`;
+const makeAnswer = (nums) => gcd(...nums).toString();
 
 export {
   questionWording,

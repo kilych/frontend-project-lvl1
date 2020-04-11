@@ -23,9 +23,9 @@ const makeQuestion = () => [
   getRandomInt(1, maxNum),
 ];
 
-const stringifyQuestion = (question) => `${question[1]} ${question[0]} ${question[2]}`;
+const stringifyQuestion = ([symbol, operand1, operand2]) => `${operand1} ${symbol} ${operand2}`;
 
-const makeAnswer = (expr) => `${operatorMapping[expr[0]](expr[1], expr[2])}`;
+const makeAnswer = ([symbol, ...operands]) => operators[symbol](...operands).toString();
 
 export {
   questionWording,
