@@ -27,9 +27,15 @@ const stringifyQuestion = ([symbol, operand1, operand2]) => `${operand1} ${symbo
 
 const makeAnswer = ([symbol, ...operands]) => operators[symbol](...operands).toString();
 
+const makeQA = () => {
+  const question = makeQuestion();
+  const questionString = stringifyQuestion(question);
+  const answer = makeAnswer(question);
+
+  return [questionString, answer];
+};
+
 export {
   questionWording,
-  makeQuestion,
-  makeAnswer,
-  stringifyQuestion,
+  makeQA,
 };

@@ -25,9 +25,15 @@ const isPrime = (num) => {
 
 const makeAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
+const makeQA = () => {
+  const question = makeQuestion();
+  const questionString = stringifyQuestion(question);
+  const answer = makeAnswer(question);
+
+  return [questionString, answer];
+};
+
 export {
   questionWording,
-  makeQuestion,
-  makeAnswer,
-  stringifyQuestion,
+  makeQA,
 };

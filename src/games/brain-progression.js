@@ -29,9 +29,15 @@ const stringifyQuestion = ([start, step, hiddenElemIndex]) => {
 const makeAnswer = ([start, step, hiddenElemIndex]) => (start + (step * hiddenElemIndex))
   .toString();
 
+const makeQA = () => {
+  const question = makeQuestion();
+  const questionString = stringifyQuestion(question);
+  const answer = makeAnswer(question);
+
+  return [questionString, answer];
+};
+
 export {
   questionWording,
-  makeQuestion,
-  makeAnswer,
-  stringifyQuestion,
+  makeQA,
 };
