@@ -10,7 +10,7 @@ const stringifyQuestion = (question) => question.toString();
 
 const makeAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
 
-const makeQA = () => {
+const makeQuestionAndAnswer = () => {
   const question = makeQuestion();
   const questionString = stringifyQuestion(question);
   const answer = makeAnswer(question);
@@ -20,5 +20,5 @@ const makeQA = () => {
 
 export {
   description,
-  makeQA,
+  makeQuestionAndAnswer,
 };

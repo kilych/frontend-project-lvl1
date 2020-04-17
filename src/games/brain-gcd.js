@@ -13,7 +13,7 @@ const stringifyQuestion = ([num1, num2]) => `${num1} ${num2}`;
 
 const makeAnswer = (nums) => greatestCommonDivisor(...nums).toString();
 
-const makeQA = () => {
+const makeQuestionAndAnswer = () => {
   const question = makeQuestion();
   const questionString = stringifyQuestion(question);
   const answer = makeAnswer(question);
@@ -23,5 +23,5 @@ const makeQA = () => {
 
 export {
   description,
-  makeQA,
+  makeQuestionAndAnswer,
 };

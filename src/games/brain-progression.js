@@ -29,7 +29,7 @@ const stringifyQuestion = ([start, step, hiddenElemIndex]) => {
 const makeAnswer = ([start, step, hiddenElemIndex]) => (start + (step * hiddenElemIndex))
   .toString();
 
-const makeQA = () => {
+const makeQuestionAndAnswer = () => {
   const question = makeQuestion();
   const questionString = stringifyQuestion(question);
   const answer = makeAnswer(question);
@@ -39,5 +39,5 @@ const makeQA = () => {
 
 export {
   description,
-  makeQA,
+  makeQuestionAndAnswer,
 };
