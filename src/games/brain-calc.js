@@ -11,7 +11,7 @@ const operators = {
 const description = 'What is the result of the expression?';
 
 const getRandomOperatorSymbol = () => {
-  const operatorSymbols = [...Object.keys(operators)];
+  const operatorSymbols = Object.keys(operators);
   const random = getRandomInt(0, operatorSymbols.length - 1);
 
   return operatorSymbols[random];
