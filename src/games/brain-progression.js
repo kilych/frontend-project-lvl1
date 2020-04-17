@@ -31,10 +31,10 @@ const makeAnswer = ([start, step, hiddenElemIndex]) => (start + (step * hiddenEl
 
 const makeQuestionAndAnswer = () => {
   const question = makeQuestion();
-  const questionString = stringifyQuestion(question);
-  const answer = makeAnswer(question);
+  const questionAsString = stringifyQuestion(question);
+  const answerAsString = makeAnswer(question);
 
-  return [questionString, answer];
+  return [questionAsString, answerAsString];
 };
 
 export {

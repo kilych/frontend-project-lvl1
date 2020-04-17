@@ -29,10 +29,10 @@ const makeAnswer = ([symbol, ...operands]) => operators[symbol](...operands).toS
 
 const makeQuestionAndAnswer = () => {
   const question = makeQuestion();
-  const questionString = stringifyQuestion(question);
-  const answer = makeAnswer(question);
+  const questionAsString = stringifyQuestion(question);
+  const answerAsString = makeAnswer(question);
 
-  return [questionString, answer];
+  return [questionAsString, answerAsString];
 };
 
 export {
