@@ -1,4 +1,4 @@
-import { getRandomInt, gcd } from '../math.js';
+import { getRandomInt, greatestCommonDivisor } from '../math.js';
 
 const maxNum = 100;
 
@@ -11,7 +11,7 @@ const makeQuestion = () => [
 
 const stringifyQuestion = ([num1, num2]) => `${num1} ${num2}`;
 
-const makeAnswer = (nums) => gcd(...nums).toString();
+const makeAnswer = (nums) => greatestCommonDivisor(...nums).toString();
 
 const makeQA = () => {
   const question = makeQuestion();

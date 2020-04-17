@@ -7,13 +7,13 @@ const getRandomInt = (min, max) => {
 
 const isEven = (num) => num % 2 === 0;
 
-const gcd = (a, b) => {
+const greatestCommonDivisor = (a, b) => {
   if (a === 0 && b === 0) return NaN;
-  if (b === 0) return gcd(b, a);
+  if (b === 0) return a;
 
   const rem = a % b;
 
-  return (rem === 0) ? b : gcd(b, rem);
+  return (rem === 0) ? b : greatestCommonDivisor(b, rem);
 };
 
 const isPrimeIter = (num, divisor) => {
@@ -34,6 +34,6 @@ const isPrime = (num) => {
 export {
   getRandomInt,
   isEven,
-  gcd,
+  greatestCommonDivisor,
   isPrime,
 };
