@@ -16,19 +16,18 @@ const greatestCommonDivisor = (a, b) => {
   return (rem === 0) ? b : greatestCommonDivisor(b, rem);
 };
 
-const isPrimeIter = (num, divisor) => {
-  if (divisor ** 2 > num) return true;
-  if (num % divisor === 0) return false;
-
-  return isPrimeIter(num, divisor + 2);
-};
-
 const isPrime = (num) => {
   if (num <= 1) return false;
   if (num <= 3) return true;
   if (num % 2 === 0) return false;
 
-  return isPrimeIter(num, 3);
+  for (let divisor = 3; divisor ** 2 <= num; divisor += 2) {
+    if (num % divisor === 0) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 export {
