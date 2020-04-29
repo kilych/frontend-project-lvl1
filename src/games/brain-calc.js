@@ -23,7 +23,7 @@ const makeQuestion = () => [
   getRandomInt(1, maxNum),
 ];
 
-const stringifyQuestion = ([operationSign, operand1, operand2]) => `${operand1} ${operationSign} ${operand2}`;
+const stringifyQuestion = ([operationSign, ...operands]) => operands.join(` ${operationSign} `);
 
 const makeAnswer = ([sign, ...operands]) => signToOperationMap[sign](...operands).toString();
 
