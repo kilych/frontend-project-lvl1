@@ -4,35 +4,24 @@ const defaultSize = 10;
 
 const description = 'What number is missing in the progression?';
 
-const makeQuestion = () => {
+const makeProgression = () => {
   const start = getRandomInt(1, 100);
   const step = getRandomInt(1, 10);
-  const hiddenElemIndex = getRandomInt(1, defaultSize - 2);
+  const progression = [];
 
-  return [
-    start,
-    step,
-    hiddenElemIndex,
-  ];
-};
-
-const stringifyQuestion = ([start, step, hiddenElemIndex]) => {
-  const elems = [];
-  for (let i = 0; i < defaultSize; i += 1) {
-    const elem = (i === hiddenElemIndex) ? '..' : (start + (i * step)).toString();
-    elems.push(elem);
+  for (let elem = start; elem < (start + step * defaultSize); elem += step) {
+    progression.push(elem);
   }
 
-  return elems.join(' ');
+  return progression;
 };
 
-const makeAnswer = ([start, step, hiddenElemIndex]) => (start + (step * hiddenElemIndex))
-  .toString();
-
 const makeQuestionAndAnswer = () => {
-  const question = makeQuestion();
-  const questionAsString = stringifyQuestion(question);
-  const answerAsString = makeAnswer(question);
+  const hiddenElemIndex = getRandomInt(1, defaultSize - 2);
+  const progression = makeProgression();
+  const [hiddenElem] = progression.splice(hiddenElemIndex, 1, '...');
+  const questionAsString = progression.join(' ');
+  const answerAsString = hiddenElem.toString();
 
   return [questionAsString, answerAsString];
 };
