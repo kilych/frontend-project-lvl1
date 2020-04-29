@@ -4,14 +4,10 @@ const maxNum = 100;
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const makeQuestion = () => getRandomInt(1, maxNum);
-
-const makeAnswer = (num) => (isPrime(num) ? 'yes' : 'no');
-
 const makeQuestionAndAnswer = () => {
-  const question = makeQuestion();
-  const questionAsString = question.toString();
-  const answerAsString = makeAnswer(question);
+  const num = getRandomInt(1, maxNum);
+  const questionAsString = num.toString();
+  const answerAsString = isPrime(num) ? 'yes' : 'no';
 
   return [questionAsString, answerAsString];
 };
