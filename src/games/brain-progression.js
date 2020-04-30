@@ -24,10 +24,10 @@ const makeQuestionAndAnswer = () => {
   const progression = makeProgression();
   const hiddenElemIndex = getRandomInt(1, progression.length - 2);
   const [hiddenElem] = progression.splice(hiddenElemIndex, 1, '...');
-  const questionAsString = progression.join(' ');
-  const answerAsString = hiddenElem.toString();
+  const question = progression.join(' ');
+  const answer = hiddenElem.toString();
 
-  return [questionAsString, answerAsString];
+  return [question, answer];
 };
 
 export {

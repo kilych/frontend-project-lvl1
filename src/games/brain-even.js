@@ -6,10 +6,10 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 const makeQuestionAndAnswer = () => {
   const num = getRandomInt(1, maxNum);
-  const questionAsString = num.toString();
-  const answerAsString = isEven(num) ? 'yes' : 'no';
+  const question = num.toString();
+  const answer = isEven(num) ? 'yes' : 'no';
 
-  return [questionAsString, answerAsString];
+  return [question, answer];
 };
 
 export {

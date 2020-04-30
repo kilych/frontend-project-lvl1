@@ -17,22 +17,22 @@ const getRandomOperationSign = () => {
   return operationSigns[random];
 };
 
-const makeQuestion = () => [
+const makeExpression = () => [
   getRandomOperationSign(),
   getRandomInt(1, maxNum),
   getRandomInt(1, maxNum),
 ];
 
-const stringifyQuestion = ([operationSign, ...operands]) => operands.join(` ${operationSign} `);
+const stringifyExpression = ([operationSign, ...operands]) => operands.join(` ${operationSign} `);
 
-const makeAnswer = ([sign, ...operands]) => signToOperationMap[sign](...operands).toString();
+const evalExpression = ([sign, operand1, operand2]) => signToOperationMap[sign](operand1, operand2);
 
 const makeQuestionAndAnswer = () => {
-  const question = makeQuestion();
-  const questionAsString = stringifyQuestion(question);
-  const answerAsString = makeAnswer(question);
+  const expr = makeExpression();
+  const question = stringifyExpression(expr);
+  const answer = evalExpression(expr).toString();
 
-  return [questionAsString, answerAsString];
+  return [question, answer];
 };
 
 export {
