@@ -1,15 +1,19 @@
 import { getRandomInt } from '../math.js';
 
-const defaultSize = 10;
+const progressionSize = 10;
+
+const maxProgressionStart = 100;
+
+const maxProgressionStep = 10;
 
 const description = 'What number is missing in the progression?';
 
 const makeProgression = () => {
-  const start = getRandomInt(1, 100);
-  const step = getRandomInt(1, 10);
+  const start = getRandomInt(1, maxProgressionStart);
+  const step = getRandomInt(1, maxProgressionStep);
   const progression = [];
 
-  for (let elem = start; elem < (start + step * defaultSize); elem += step) {
+  for (let elem = start; elem < (start + step * progressionSize); elem += step) {
     progression.push(elem);
   }
 
@@ -17,8 +21,8 @@ const makeProgression = () => {
 };
 
 const makeQuestionAndAnswer = () => {
-  const hiddenElemIndex = getRandomInt(1, defaultSize - 2);
   const progression = makeProgression();
+  const hiddenElemIndex = getRandomInt(1, progression.length - 2);
   const [hiddenElem] = progression.splice(hiddenElemIndex, 1, '...');
   const questionAsString = progression.join(' ');
   const answerAsString = hiddenElem.toString();
