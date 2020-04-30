@@ -4,21 +4,13 @@ const maxNum = 100;
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const makeQuestion = () => [
-  getRandomInt(1, maxNum),
-  getRandomInt(1, maxNum),
-];
-
-const stringifyQuestion = ([num1, num2]) => `${num1} ${num2}`;
-
-const makeAnswer = (nums) => greatestCommonDivisor(...nums).toString();
-
 const makeQuestionAndAnswer = () => {
-  const question = makeQuestion();
-  const questionAsString = stringifyQuestion(question);
-  const answerAsString = makeAnswer(question);
+  const num1 = getRandomInt(1, maxNum);
+  const num2 = getRandomInt(1, maxNum);
+  const question = `${num1} ${num2}`;
+  const answer = greatestCommonDivisor(num1, num2).toString();
 
-  return [questionAsString, answerAsString];
+  return [question, answer];
 };
 
 export {
