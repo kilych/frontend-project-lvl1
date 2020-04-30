@@ -1,4 +1,4 @@
-import { getRandomInt } from '../math.js';
+import getRandomInt from '../helpers/get-random-int.js';
 
 const maxNum = 20;
 

@@ -1,8 +1,10 @@
-import { getRandomInt, isEven } from '../math.js';
+import getRandomInt from '../helpers/get-random-int.js';
 
 const maxNum = 100;
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const isEven = (num) => num % 2 === 0;
 
 const makeQuestionAndAnswer = () => {
   const num = getRandomInt(1, maxNum);
